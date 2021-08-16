@@ -1,7 +1,9 @@
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: #FDDD52;
 }
 
 body {
@@ -9,8 +11,8 @@ body {
     flex-direction: column;
     justify-content: center;
     background: no-repeat
-    radial-gradient(ellipse at top, #03157f, #4B63EA),
-    radial-gradient(ellipse at bottom, #03157f, #4B63EA);
+    radial-gradient(ellipse at top, #03157f, #3e58eb),
+    radial-gradient(ellipse at bottom, #03157f, #3e58eb);
    
 
 }
@@ -20,6 +22,8 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
+   position: relative;
 }
 
 .square {
@@ -27,14 +31,19 @@ body {
     color: #FDDD52;
     font-weight: 600;
     font-size: large;
-    background-color: #03157F;
+    background-color: #0421c5;
     width: px;
     height:100%px;
     padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.square:hover {
+    background-color: burlywood;
 }
 
 #gameboard {
@@ -43,6 +52,31 @@ body {
     grid-template-rows: repeat(5, 1fr);
     height: 20%;
     width: 80%;
-    border: 1px solid black;
     justify-content: center;
+}
+
+#title {
+    margin-bottom: 10%;
+}
+
+#score {
+    margin-bottom: 5%;
+}
+
+#game-message {
+    margin-bottom: 10%;
+}
+
+#answer-section {
+display: flex;
+
+}
+
+#input-area {
+    position: absolute;
+    top: 875px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
