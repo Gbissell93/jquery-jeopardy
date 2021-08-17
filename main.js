@@ -65,7 +65,8 @@ while (count < gridWidth * gridWidth) {
     }
     let answer = question.answer;
     const submitAnswer = () => {
-        if (answer.toLowerCase() == answerBox.val().toLowerCase) {
+        //function will always result in incorrect answer case
+        if (answer.toLowerCase() === answerBox.val().toLowerCase) {
             gameMsg.text('CORRECT!')
             updateScore(counter)
         
